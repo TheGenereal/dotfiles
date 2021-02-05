@@ -14,8 +14,9 @@ IP=$(ipconfig getifaddr en0)
 # fi
 
 # # Speedtest
-# DL=$(cat ~/bin/bandwidth.log | awk 'NR==2{print $2}')
-# UP=$(cat ~/bin/bandwidth.log | awk 'NR==3{print $2}')
+speedtest --secure --simple > ~/.dotfiles/speedtest/bandwidth.log
+DL=$(cat ~/bin/bandwidth.log | awk 'NR==2{print $2}')
+UP=$(cat ~/bin/bandwidth.log | awk 'NR==3{print $2}')
 
 # # Public IP
 PUBLIC_IP=`curl -4 ifconfig.co`
